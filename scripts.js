@@ -131,3 +131,35 @@
 // 	var arr = Array.from(String(nums), num => Number(num))
 // 	return arr.reduce((acc, crVal) => acc + crVal) % 2 === 0 ? 'Evenish' : 'Oddish'
 // }
+
+// Length of a Nested Array
+// Write a function that returns the total number of non-nested items in a nested array.
+// var counter = 0
+// function getLength(arr) {
+// 	arr.forEach(element => {
+//     if (Array.isArray(element)) {
+//       getLength(element)
+//     } else {
+//       counter += 1
+//     }
+//   });
+//   return counter
+// }
+
+// Numbers in Strings
+// Create a function that takes an array of strings and returns an array with only the strings that have numbers in them. If there are no strings containing numbers, return an empty array.
+// Bonus: Try solving this without RegEx.
+// function numInStr(arr) {
+//   var arr2 = []
+//   nums = [0,1,2,3,4,5,6,7,8,9]
+//   var controller = false
+// 	arr.forEach((element) => {
+//     controller = false
+//     for (let index = 0; index < nums.length; index++) {
+//       controller = element.includes(nums[index])
+//       if (controller) break
+//     }
+//     controller ? arr2.push(element) : arr2.push("")
+//   })
+//   return arr2
+// }
