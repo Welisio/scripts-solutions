@@ -1,0 +1,327 @@
+// How Edabit Works 
+// function hello() {
+// 	return "hello edabit.com"
+// }
+
+// Return the Sum of Two Numbers
+// function addition(a, b) {
+// 	return a + b
+// }
+
+// Convert Minutes into Seconds
+// function convert(minutes) {
+// 	return minutes * 60
+// }
+
+// Return the Next Number from the Integer Passed
+// function addition(num) {
+// 	return num + 1
+// }
+
+// Return Something to Me!
+// function giveMeSomething(a) {
+//   return 'something ' + a
+// }
+
+// Is the Number Less than or Equal to Zero?
+// function lessThanOrEqualToZero(num) {
+// 	return num <= 0 ? true : false 
+// }
+
+// Find the Perimeter of a Rectangle
+// function findPerimeter(length, width) {
+// 	return 2*(length + width)
+// }
+
+// Sum of Polygon Angles
+// function sumPolygon(n) {
+// 	return n > 2 ? (n - 2) * 180 : null
+// }
+
+// Convert Hours into Seconds
+// function howManySeconds(hours) {
+// 	return hours * 60 * 60
+// }
+
+// Area of a Triangle
+// function triArea(base, height) {
+// 	return (base * height) / 2
+// }
+
+// Convert Age to Days
+// function calcAge(age) {
+// 	return age * 365
+// }
+
+// Power Calculator
+// function circuitPower(voltage, current) {
+// 	return voltage * current
+// }
+
+// Buggy Code (Part 7)
+// function swap(a, b) {
+// 	c = b
+// 	b = a
+// 	a = c
+// 	return [a, b]
+// }
+
+// Are the Numbers Equal?
+// function isSameNum(num1, num2) {
+// 	return num1 === num2
+// }
+
+// https://www.codewars.com/kata/56f699cd9400f5b7d8000b55/train/javascript
+// function fixTheMeerkat(arr) {
+// 	arr.reverse()
+// 	return arr
+// }
+
+// https://www.codewars.com/kata/5dd462a573ee6d0014ce715b
+// function sameCase(a, b){
+// 	if ( (typeof a !== 'string' || typeof b !== 'string') || (a.match(/[a-z]/i) == null || b.match(/[a-z]/i) == null) ) {
+// 	  return -1
+// 	} else if ( (a === a.toUpperCase() && b === b.toUpperCase() ) || ( a === a.toLowerCase() && b === b.toLowerCase() ) ) {
+// 	  return 1
+// 	} else {
+// 	  return 0
+// 	}
+// }
+
+// How Much is True?
+// Create a function which returns the number of true values there are in an array.
+// function countTrue(arr) {
+// 	var countTrue  = 0
+// 	arr.forEach(element => {
+// 		element === true ? countTrue += 1 : null
+// 	});
+// 	return countTrue
+// }
+
+// Find Number of Digits in Number
+// Create a function that will return an integer number corresponding to the amount of digits in the given integer num.
+// function num_of_digits(num) {
+// 	return num.toString().length
+// }
+
+// Right Shift by Division
+// The right shift operation is similar to floor division by powers of two.
+// Sample calculation using the right shift operator ( >> ):
+// 80 >> 3 = floor(80/2^3) = floor(80/8) = 10
+// -24 >> 2 = floor(-24/2^2) = floor(-24/4) = -6
+// -5 >> 1 = floor(-5/2^1) = floor(-5/2) = -3
+// Write a function that mimics (without the use of >>) the right shift operator and returns the result from the two given integers.
+// function shiftToRight(x, y) {
+// 	return x / (2**y)
+// }
+
+// Seven Boom!
+// Create a function that takes an array of numbers and return "Boom!" if the digit 7 appears in the array. Otherwise, return "there is no 7 in the array".
+// function sevenBoom(arr) {
+// 	var boom = 'There is no Boom'
+// 	arr.forEach(element => {
+// 		if(element === 7) boom = 'Boom'
+// 	});
+// 	return boom
+// }
+
+// Oddish vs. Evenish
+// Create a function that determines whether a number is Oddish or Evenish. A number is Oddish if the sum of all of its digits is odd, and a number is Evenish if the sum of all of its digits is even. If a number is Oddish, return "Oddish". Otherwise, return "Evenish".
+// function oddishOrEvenish(nums) {
+// 	var arr = Array.from(String(nums), num => Number(num))
+// 	return arr.reduce((acc, crVal) => acc + crVal) % 2 === 0 ? 'Evenish' : 'Oddish'
+// }
+
+// Length of a Nested Array
+// Write a function that returns the total number of non-nested items in a nested array.
+// var counter = 0
+// function getLength(arr) {
+// 	arr.forEach(element => {
+//     if (Array.isArray(element)) {
+//       getLength(element)
+//     } else {
+//       counter += 1
+//     }
+//   });
+//   return counter
+// }
+
+// Numbers in Strings
+// Create a function that takes an array of strings and returns an array with only the strings that have numbers in them. If there are no strings containing numbers, return an empty array.
+// Bonus: Try solving this without RegEx.
+// function numInStr(arr) {
+//   var arr2 = []
+//   nums = [0,1,2,3,4,5,6,7,8,9]
+//   var controller = false
+// 	arr.forEach((element) => {
+//     controller = false
+//     for (let index = 0; index < nums.length; index++) {
+//       controller = element.includes(nums[index])
+//       if (controller) break
+//     }
+//     controller ? arr2.push(element) : arr2.push("")
+//   })
+//   return arr2
+// }
+
+// *************************************************************************************************************************
+
+// Histogram Function
+// Build a function that creates histograms. Every bar needs to be on a new line and its length corresponds to the numbers in the array passed as an argument. The second argument of the function represents the character to be used for the bar.
+// function histogram(arr, char) {
+//     var str = ""
+//     arr.forEach(element => {
+//         for(let i = 0; i < element; i++) {
+//             str += char
+//         }
+//         str += "\n"
+//     });
+//     return str
+// }
+
+// Basic Arithmetic Operations on a String Number
+// Create a function to perform basic arithmetic operations that includes addition, subtraction, multiplication and division on a string number (e.g. "12 + 24" or "23 - 21" or "12 / 12" or "12 * 21").
+// Here, we have 1 followed by a space, operator followed by another space and 2. For the challenge, we are going to have only two numbers between 1 valid operator. The return value should be a number.
+// eval() is not allowed. In case of division, whenever the second number equals "0" return -1.
+// function arithmeticOperation(n) {
+//     var splited = n.split(" ")
+//     var result = null
+//     zeroDivision = null
+//     switch (splited[1]) {
+//         case '+':
+//             result = parseInt(splited[0]) + parseInt(splited[2])
+//             break;
+//         case '-':
+//             result = parseInt(splited[0]) - parseInt(splited[2])
+//             break;
+//         case '*':
+//             result = parseInt(splited[0]) * parseInt(splited[2])
+//             break;
+//         case '/':
+//             if (splited[0] === '0' || splited[2] === '0') {
+//                 result = -1
+//             } else result = parseInt(splited[0]) / parseInt(splited[2])
+//             break;
+//         default:
+//             break;
+//     }
+//     return result
+// }
+
+// Combinations
+// Create a function that takes a variable number of arguments, each argument representing the number of items in a group. The function should return the number of permutations (combinations) of choices you would have if you selected one item from each group.
+// function combinations(...items) { 
+//     let result = items.reduce((acc, currVal) => {
+//         return acc * currVal
+//     })
+//     return result
+// }
+
+// Burglary Series (12): Get Vodka Bottle
+// The insurance guy laughs, he's just kidding. He just needs an updated list. You just need one of those Rammstein Vodka bottles.
+// Given an object with alcoholic drinks and a number, return a string with the name of the Rammstein bottle that matches the given number.
+// Sample getVodkaBottle({ whiskey: 100, "Rammstein A": 100, "Rammstein B": 50 }, 100)  ➞ "Rammstein A"
+// function getVodkaBottle(obj, num) {
+//     let result = null
+//     for (item in obj) {
+//         if (item.split(" ")[0] === "Rammstein" && obj[item] === num) {
+//             result = item
+//         }
+//     }
+//     return result
+// }
+
+// Convert "Zero" and "One" to "1" and "0"
+// Create a function that takes a string as an argument. The function must return a string containing 1s and 0s based on the string argument's words. If any word in the argument is not equal to "zero" or "one" (case insensitive), you should ignore it. The returned string's length should be a multiple of 8, if the string is not a multiple of 8 you should remove the numbers in excess.
+// function textToNumberBinary(str) {
+// 	splited = str.split(" ")
+//     innerStr = ""
+//     for(word of splited) {
+//         switch(word) {
+//             case 'zero':
+//                 innerStr += '0'
+//                 break;
+//             case 'one':
+//                 innerStr += '1'
+//                 break;
+//         }
+//         if (innerStr.length === 8) break;
+//     }
+//     return innerStr
+// }
+
+// Calculate the Total Price of Groceries
+// Create a function that takes an array of objects (groceries) which calculates the total price and returns it as a number. A grocery object has a product, a quantity and a price
+// Several groceries:
+// getTotalPrice([
+//     { product: "Milk", quantity: 1, price: 1.50 },
+//     { product: "Eggs", quantity: 12, price: 0.10 },
+//     { product: "Bread", quantity: 2, price: 1.60 },
+//     { product: "Cheese", quantity: 1, price: 4.50 }
+//   ]) ➞ 10.4
+// function getTotalPrice(groceries) {
+//     let groceryPrices = []
+// 	groceries.forEach(elem => {
+//         groceryPrices.push(elem.quantity * elem.price)
+//     })
+//     sum = groceryPrices.reduce((acc, currVal) => {
+//         return acc + currVal
+//     })
+//     return sum.toFixed(1)
+// }
+
+//  WORK WITH ILKIN BELOW
+// let products = [
+//     { product: "Milk", quantity: null, price: 1.50 },
+//     { product: "Eggs", quantity: null, price: 0.10 },
+//     { product: "Bread", quantity: null, price: 1.60 },
+//     { product: "Cheese", quantity: null, price: 4.50 }
+// ]
+// let result=0
+// let product = prompt('Product daxil edin')
+// let quantity = prompt('Aded daxil edin')
+
+// function getTotalPrice2 (product, quantity) {
+//     products.forEach(elem => {
+//         if (elem.product === product) {
+
+//         }
+//     })
+    // if (products[0].product==product){
+    //     result=quantity*products[0].price;
+    //     console.log(result);
+    // }
+// }
+
+// getTotalPrice2(product,quantity)
+
+//  WORK WITH ILKIN ABOVE
+
+// Positive Dominant
+// isPositiveDominant([1, 1, 1, 1, -3, -4]) ➞ false
+// There is only 1 unique positive value (1).
+// There are 2 unique negative values (-3, -4).
+
+// isPositiveDominant([5, 99, 832, -3, -4]) ➞ true
+
+// isPositiveDominant([5, 0]) ➞ true
+
+// isPositiveDominant([0, -4, -1]) ➞ false
+
+
+// function isPositiveDominant(arr) {
+//     arr2 = []
+// 	arr.forEach(elm => {
+//         if (!arr2.includes(elm)) {
+//             if (Math.sign(elm)) {
+
+//             } else
+//         }
+//         if (Math.sign(elm) === 1 && !arr2.includes(elm)) {
+//             arr2.push(elm)
+//         } else if (Math.sign(elm) === -1 && !arr2.includes(elm)) console.log(elm,-1)
+//     })
+//     return false
+// }
+
+// console.log(isPositiveDominant([1, 1, 1, 1, -3, -4]))
