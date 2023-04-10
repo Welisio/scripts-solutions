@@ -163,3 +163,208 @@
 //   })
 //   return arr2
 // }
+
+// *************************************************************************************************************************
+
+// Histogram Function
+// Build a function that creates histograms. Every bar needs to be on a new line and its length corresponds to the numbers in the array passed as an argument. The second argument of the function represents the character to be used for the bar.
+// function histogram(arr, char) {
+//     var str = ""
+//     arr.forEach(element => {
+//         for(let i = 0; i < element; i++) {
+//             str += char
+//         }
+//         str += "\n"
+//     });
+//     return str
+// }
+
+// Basic Arithmetic Operations on a String Number
+// Create a function to perform basic arithmetic operations that includes addition, subtraction, multiplication and division on a string number (e.g. "12 + 24" or "23 - 21" or "12 / 12" or "12 * 21").
+// Here, we have 1 followed by a space, operator followed by another space and 2. For the challenge, we are going to have only two numbers between 1 valid operator. The return value should be a number.
+// eval() is not allowed. In case of division, whenever the second number equals "0" return -1.
+// function arithmeticOperation(n) {
+//     var splited = n.split(" ")
+//     var result = null
+//     zeroDivision = null
+//     switch (splited[1]) {
+//         case '+':
+//             result = parseInt(splited[0]) + parseInt(splited[2])
+//             break;
+//         case '-':
+//             result = parseInt(splited[0]) - parseInt(splited[2])
+//             break;
+//         case '*':
+//             result = parseInt(splited[0]) * parseInt(splited[2])
+//             break;
+//         case '/':
+//             if (splited[0] === '0' || splited[2] === '0') {
+//                 result = -1
+//             } else result = parseInt(splited[0]) / parseInt(splited[2])
+//             break;
+//         default:
+//             break;
+//     }
+//     return result
+// }
+
+// Combinations
+// Create a function that takes a variable number of arguments, each argument representing the number of items in a group. The function should return the number of permutations (combinations) of choices you would have if you selected one item from each group.
+// function combinations(...items) { 
+//     let result = items.reduce((acc, currVal) => {
+//         return acc * currVal
+//     })
+//     return result
+// }
+
+// Burglary Series (12): Get Vodka Bottle
+// The insurance guy laughs, he's just kidding. He just needs an updated list. You just need one of those Rammstein Vodka bottles.
+// Given an object with alcoholic drinks and a number, return a string with the name of the Rammstein bottle that matches the given number.
+// Sample getVodkaBottle({ whiskey: 100, "Rammstein A": 100, "Rammstein B": 50 }, 100)  ➞ "Rammstein A"
+// function getVodkaBottle(obj, num) {
+//     let result = null
+//     for (item in obj) {
+//         if (item.split(" ")[0] === "Rammstein" && obj[item] === num) {
+//             result = item
+//         }
+//     }
+//     return result
+// }
+
+// Convert "Zero" and "One" to "1" and "0"
+// Create a function that takes a string as an argument. The function must return a string containing 1s and 0s based on the string argument's words. If any word in the argument is not equal to "zero" or "one" (case insensitive), you should ignore it. The returned string's length should be a multiple of 8, if the string is not a multiple of 8 you should remove the numbers in excess.
+// function textToNumberBinary(str) {
+// 	splited = str.split(" ")
+//     innerStr = ""
+//     for(word of splited) {
+//         switch(word) {
+//             case 'zero':
+//                 innerStr += '0'
+//                 break;
+//             case 'one':
+//                 innerStr += '1'
+//                 break;
+//         }
+//         if (innerStr.length === 8) break;
+//     }
+//     return innerStr
+// }
+
+// Calculate the Total Price of Groceries
+// Create a function that takes an array of objects (groceries) which calculates the total price and returns it as a number. A grocery object has a product, a quantity and a price
+// Several groceries:
+// getTotalPrice([
+//     { product: "Milk", quantity: 1, price: 1.50 },
+//     { product: "Eggs", quantity: 12, price: 0.10 },
+//     { product: "Bread", quantity: 2, price: 1.60 },
+//     { product: "Cheese", quantity: 1, price: 4.50 }
+//   ]) ➞ 10.4
+// function getTotalPrice(groceries) {
+//     let groceryPrices = []
+// 	groceries.forEach(elem => {
+//         groceryPrices.push(elem.quantity * elem.price)
+//     })
+//     sum = groceryPrices.reduce((acc, currVal) => {
+//         return acc + currVal
+//     })
+//     return sum.toFixed(1)
+// }
+
+//  WORK WITH ILKIN BELOW
+// let products = [
+//     { product: "Milk", quantity: null, price: 1.50 },
+//     { product: "Eggs", quantity: null, price: 0.10 },
+//     { product: "Bread", quantity: null, price: 1.60 },
+//     { product: "Cheese", quantity: null, price: 4.50 }
+// ]
+// let result = 0
+// let product = prompt('Product daxil edin')
+// let quantity = prompt('Aded daxil edin')
+// function getTotalPrice2 (product, quantity) {
+//     products.forEach(elem => {
+//       if (elem.product.toLowerCase() === product.toLowerCase()) {
+//         result = quantity * elem.price;
+//       }
+//     })
+//     console.log(result) 
+// }
+// getTotalPrice2(product,quantity)
+//  WORK WITH ILKIN ABOVE
+
+// Positive Dominant
+// An array is positive dominant if it contains strictly more unique positive values than unique negative values. Write a function that returns true if an array is positive dominant.
+// 0 counts as neither a positive nor a negative value.
+// function isPositiveDominant(arr) {
+//   let arr2 = []
+//   let positiveCount = 0
+//   let negativeCount = 0
+// 	arr.forEach(elm => {
+//     if (!arr2.includes(elm) && elm !== 0) {
+//       arr2.push(elm)
+//       if (Math.sign(elm) === 1) {
+//         positiveCount += 1
+//       } else negativeCount += 1
+//     }
+//   })
+//   return positiveCount > negativeCount
+// }
+
+// console.log('    +\n   +++\n  +++++\n +++++++\n+++++++++\n   +++\n   +++')
+
+// Number of Boomerangs
+// A boomerang is a V-shaped sequence that is either upright or upside down. Specifically, a boomerang can be defined as: sub-array of length 3, with the first and last digits being the same and the middle digit being different.
+// [5, 5, 5] (triple identical digits) is NOT considered a boomerang because the middle digit is identical to the first and last.
+// function countBoomerangs(arr) {
+//   let boomerangsCount = 0
+// 	for(let i = 0;i < arr.length; i++) {
+//     if (arr[i - 1] === arr[i + 1] && arr[i] !== arr[i + 1]) boomerangsCount += 1 
+//   }
+//   return boomerangsCount
+// }
+
+// How Many Days Between Two Dates
+// var date1 = new Date("April 7, 2019").getTime()
+// var date2 = new Date("May 12, 2020").getTime()
+// var diff = date2 - date1
+// var daysDiff = diff / (1000 * 60 * 60 * 24)
+
+// Working 9 to 5
+// Write a function that calculates overtime and pay associated with overtime.
+// Working 9 to 5: regular hours
+// After 5pm is overtime
+// Your function gets an array with 4 values:
+// Start of working day, in decimal format, (24-hour day notation)
+// End of working day. (Same format)
+// Hourly rate
+// Overtime multiplier
+// Your function should spit out:
+// $ + earned that day (rounded to the nearest hundreth)
+// function overTime(arr) {
+//   let overTimeHours = 0
+//   let [startingHours, endingHours, hourlyRate, overTimeMultiplier] = arr
+// 	overTimeHours = endingHours - 17 > 0 ? endingHours - 17 : null
+//   let overTimeIncome = overTimeHours ? overTimeHours * hourlyRate * overTimeMultiplier : 0
+//   let regularIncome = (17 - startingHours) * hourlyRate
+//   let sum = overTimeIncome + regularIncome
+//   return `$${sum.toFixed(2)}`
+// }
+
+// Even vs. Odds
+// https://edabit.com/challenge/975ac5gm3hAwYqqjS
+// function availableSpots(arr, num) {
+// 	var likedSpots = 0
+//   for (let i = 1; i < arr.length; i++) {
+//     if (num % 2 === 0) { 
+//       if (!(arr[i - 1] % 2 === 1 && arr[i] % 2 === 1)) {
+//         likedSpots += 1
+//       }
+//     } else {
+//       if (!(arr[i - 1] % 2 === 0 && arr[i] % 2 === 0)) {
+//         likedSpots += 1
+//       }
+//     }
+//   }
+//   return likedSpots
+// }
+
+console.log(availableSpots([0, 4, 3, 3], 9))
