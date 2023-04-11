@@ -367,4 +367,32 @@
 //   return likedSpots
 // }
 
-console.log(availableSpots([0, 4, 3, 3], 9))
+// console.log(availableSpots([0, 4, 3, 3], 9))
+
+// Mutations Only: Zeroes to the End
+// Write a function that moves all the zeroes to the end of an array. Do this without returning a copy of the input array.
+// function zeroesToEnd(arr) {
+// 	arr.forEach(element => {
+//         if (element === 0) {
+//             console.log(arr.indexOf(element))
+//             arr.splice(arr.indexOf(element),1)
+//             arr.push(0)
+//         }
+//     })
+//     return arr
+// }
+
+// 24-Hour Time
+// Write a function that receives the time in 12-hour AM/PM format and returns a string representation of the time in military (24-hour) format.
+// function convertTime(str) {
+// 	splited = str.split('')
+//     tag = splited[splited.length - 2] + splited[splited.length - 1]
+//     splited.splice(splited.length - 2, 2)
+//     timeInNums = splited.join('').split(':')
+//     if (tag === 'PM' && parseInt(timeInNums[0]) < 12) {
+//         timeInNums[0] = parseInt(timeInNums[0]) + 12
+//     } else if (tag ==='AM' && parseInt(timeInNums[0]) === 12) {
+//         timeInNums[0] = '00'
+//     }
+//     return timeInNums.join(':')
+// }
