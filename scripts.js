@@ -396,3 +396,71 @@
 //     }
 //     return timeInNums.join(':')
 // }
+
+// https://www.codewars.com/kata/5b077ebdaf15be5c7f000077/train/javascript
+
+// var countSheep = function (num){
+//     let str = ''
+//     for (let i = 1;i <= num; i++) {
+//       str += `${i} sheep...`
+//     }
+//     return str
+// }
+
+// https://www.codewars.com/kata/534d0a229345375d520006a0/train/javascript
+
+// function isPowerOfTwo(n){
+//     var multiplication = 2
+//     var boolean = false
+//     if (n === 2) return true
+//     if (n === 1) return true
+//     while (true) {
+//         multiplication =  2 * multiplication
+//         if (multiplication === n) {
+//             boolean = true
+//             break
+//         } else if (multiplication > n) {
+//             boolean = false
+//             break
+//         }
+//     }
+//     return boolean
+// }
+
+// https://www.codewars.com/kata/6071ef9cbe6ec400228d9531/train/javascript
+
+// function dotCalculator (equation) {
+//   let result = 0
+//   let arr = equation.split(' ')
+//   let num1, sign, num2
+//   [num1, sign, num2] = [arr[0].split('').length, arr[1], arr[2].split('').length]
+//   switch (sign) {
+//       case '+':
+//       result = num1 + num2
+//       break
+//       case '-':
+//       result = num1 - num2
+//       break
+//       case '*':
+//       result = num1 * num2
+//       break
+//       case '//':
+//       result = Math.floor(num1 / num2)
+//       break
+//   }
+//   let dots = ''
+//   for (let i = 0; i < result; i++) {
+//     dots += '.'
+//   }
+//   console.log(num1,num2,result)
+//   return dots
+// }
+
+// function puzzleTiles(width, height){  
+//   let first = '   _( )__ '.repeat(width).trimEnd() + "\n" // Only one
+//   let second = ' _|    '.repeat(width + 1).trimEnd()  + "\n" // Condition
+//   let third = '(_   _ '.repeat(width) + '(_'  + "\n"
+//   let fourth = ' |__( )_|'.repeat(width) + "\n"
+  
+//   return first + second + third + fourth
+// }

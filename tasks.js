@@ -167,6 +167,6 @@
 // Rəqəmlər massivi verilmişdir. Verilmiş massivin elementlərindən əlifbanın azalan sıra ilə sıralanan yeni bir massivin yaradın.
 // var arr2 = []
 // function descendingOrder (arr) {
-//   arr2 = arr.sort((a,b) => b - a)
+//   arr2 = arr.sort()
 //   return arr2
 // }
